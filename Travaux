@@ -1,1 +1,157 @@
 
+1.	Conversion numérique
+1.	Effectuez les conversions selon les bases déterminées par les en-têtes de colonnes. Il est important de ne pas utiliser la calculatrice. Garder une trace de vos calculs sur une feuille indépendante.
+Hexa	Binaire	Décimal		Hexa	Binaire			
+0	0000	0		0	0000		20	1
+1	0001	1		B	1100		21	2
+2	0010	2		9	1010		22	4
+3	0011	3		D	1110		23	8
+4	0100	4		1	0001		24	16
+5	0101	5		2	0010		25	32
+6	0111	6		F	1111		26	64
+7	1000	7		8	1001		27	128
+8	1001	8					28	256
+9	1010	9					29	512
+A	1011	10					210	1024
+B	1100	11						
+C	1101	12						
+D	1110	13						
+E		14						
+F	1111	15						
+2.	Complétez le tableau suivant :
+Systèmes numériques
+Décimal	Binaire	Hexadécimal
+265 (Voir correction 1)	110100001	
+681	1010101001 (Voir correction 2)	
+24	0101 0010 1101	A2C (Voir correction 3)
+192	0001 1010 0010	192
+168	10101000	
+		25
+456		
+1637	11001011101	
+		1F8
+1023		
+237	11101101	
+
+ 
+Étapes de conversion décimale à binaire:
+1.	Divisez le nombre par 2.
+2.	Obtenez le quotient entier pour la prochaine itération.
+3.	Obtenez le reste du chiffre binaire.
+4.	Répétez les étapes jusqu'à ce que le quotient soit égal à 0.
+5.	Lire la valeur binaire dans le sens de la flèche.
+Exemple 1
+Convertir 1310 en binaire:
+Division
+par 2	Quotient	Reste	Bit #
+13/2	6	1
+0
+6/2	3	0	1
+3/2	1	1	2
+1/2	0	1	3
+Donc 1310 = 11012
+
+Exemple # 2
+Convertir 17410 en binaire:
+Division
+par 2	Quotient	Reste	Bit #
+174/2	87	0
+0
+87/2	43	1	1
+43/2	21	1	2
+21/2	10	1	3
+10/2	5	0	4
+5/2	2	1	5
+2/2	1	0	6
+1/2	0	1	7
+Donc 174 10 = 10101110 2
+	
+
+Correction
+Correction 1
+265	|2
+	|__
+   1	 132 	|2
+		|__
+	   0	  66 	|2
+			|__
+		   0	  33 	|2
+				|__
+			   1	  16 	|2
+					|__
+				   0	  8 	|2
+						|__
+					   0	  4 	|2
+							|__
+						  0	  2 	|2
+								|__
+							  0 	   1	|2
+									|__
+								    1	   0
+
+26510 = 1000010012
+
+265 = 1|0000|1001	= 	0001|0000|1001 	= 1|0|9		= 	10916
+
+26510 = 1000010012 = 10916
+Correction 2
+
+1010101001 = 10|1010|1001 = 0010|1010|1001	= 2A916
+Position	9	8	7	6	5	4	3	2	1	0
+Binaire	1	0	1	0	1	0	1	0	0	1
+2position	512	0	128	0	32	0	8	0	0	1
+
+Faites la somme = 512 + 128 + 32 + 8 + 1 = 68110
+ 
+Une autre façon 
+Position	2	1	0
+Binaire	2	A	9
+16position	256 = 162	16 = 161	1 = 160
+Calcul	2*256	10*16	9*1
+	512	160	9
+
+512 + 160 + 9 = 681
+10101010012 = 2A916 = 68110
+Correction 3
+
+A2C = A|2|C = 1010|0010|1100
+A2C16 = 1010001011002
+101000101100
+Position	11	10	9	8	7	6	5	4	3	2	1	0
+Binaire	1	0	1	0	0	0	1	0	1	1	0	0
+2position	2048		512				32		8	4		
+
+Faites la somme = 2048 + 512 + 32 + 8 + 4 = 2604
+A2C16 = 1010001011002 = 260410
+
+ 
+3.	Convertissez les adresses suivantes :
+Systèmes numériques
+IP décimal	192         .         168         .         10         .         45
+IP binaire	
+
+IP décimal	
+IP binaire	00011101   .   11011001   .   11110000   .   00101001
+
+
+IP décimal	176         .         23         .         233         .         157
+IP binaire	
+
+IP décimal	
+IP binaire	10101010   .   11100110   .   10000111   .   00110011
+
+ 
+2.	Calcul de débit
+1)	En utilisant la conversion 1024 octets = 1 kilooctet pour calculer les temps de transfert. Complétez le tableau suivant. Mettre en évidence, sur une feuille indépendante, vos calculs…
+Vitesse d’envoi	Taille totale des données	Durée du transfert théorique
+(en min et sec)
+64 Kbits/s	333 Mo	
+32 Mbits/s	6 Go	
+12 Mbits/s			Go	11 min 30 sec
+2Gbits/s			Go	3mn20s
+		Mbits/s	256Mo	20min 50 s
+		Kbits/s	256 Mo	36 min 2 sec
+1 Gbits/s	2 To	
+
+Note : Bien entendu, le temps calculé ne prend pas en compte la surcharge du réseau (en-tête de trame et de paquet, et les paquets de contrôle).
+Vous pouvez valider vos résultats avec 
